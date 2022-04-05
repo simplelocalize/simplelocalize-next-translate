@@ -95,8 +95,6 @@ simplelocalize download
 simplelocalize upload
 ```
 
-> You can [automate process of adding translation keys](https://simplelocalize.io/docs/integrations/i18next/) from project to SimpleLocalize.
-
 
 ## Usage
 
