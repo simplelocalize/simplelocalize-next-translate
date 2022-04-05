@@ -30,7 +30,7 @@ In this example there are two namespaces: `common` and `home` and 4 locales: `en
 
 ## next-translate configuration
 
-Install next-translate for NextJS
+Install [next-translate](https://github.com/vinissimus/next-translate) for NextJS
 
 ```bash
 npm install --save next-translate
@@ -85,12 +85,12 @@ uploadFormat: single-language-json
 uploadPath: ./locales/{lang}/{ns}.json
 ```
 
-⤵️ [Download translations](https://simplelocalize.io/docs/cli/download-translations/) to `./public/locales` directory
+⤵️ [Download translations](https://simplelocalize.io/docs/cli/download-translations/) to `./locales` directory
 ```bash
 simplelocalize download
 ```
 
-⤴️ [Upload translations](https://simplelocalize.io/docs/cli/upload-translations/) from `./public/locales` directory
+⤴️ [Upload translations](https://simplelocalize.io/docs/cli/upload-translations/) from `./locales` directory
 ```bash
 simplelocalize upload
 ```
