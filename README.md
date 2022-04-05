@@ -38,10 +38,10 @@ npm install --save next-translate
 
 Create a configuration file in project root.
 
+📦 file: ./i18n.json
 ```json
-// 📦 file: ./i18n.json
 {
-  "locales": ["en", "es", "fr","pl"],
+  "locales": ["en", "es", "fr", "pl"],
   "defaultLocale": "en",
   "pages": {
     "*": ["common"],
