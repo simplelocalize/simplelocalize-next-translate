@@ -70,19 +70,23 @@ module.exports = nextTranslate({
 
 💿 Install [SimpleLocalize CLI](https://simplelocalize.io/docs/cli/get-started/)
 ```bash
-curl -s https://get.simplelocalize.io/2.0/install | bash
+curl -s https://get.simplelocalize.io/2.7/install | bash
 ```
 
 🧷 Create configuration file
 
 ```yaml
 # 📦 file: ./simplelocalize.yml
-apiKey: YOUR_PROJECT_API_KEY
-downloadFormat: single-language-json
-downloadPath: ./locales/{lang}/{ns}.json
-
+apiKey: YOUR_API_KEY
 uploadFormat: single-language-json
-uploadPath: ./locales/{lang}/{ns}.json
+uploadLanguageKey: en
+uploadPath: ./locales/en/{ns}.json
+uploadOptions:
+  - REPLACE_TRANSLATION_IF_FOUND
+
+downloadFormat: single-language-json
+downloadLanguageKeys: ['pl', 'fr', 'es']
+downloadPath: ./locales/{lang}/{ns}.json
 ```
 
 ⤵️ [Download translations](https://simplelocalize.io/docs/cli/download-translations/) to `./locales` directory
