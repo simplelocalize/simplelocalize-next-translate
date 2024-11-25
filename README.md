@@ -1,8 +1,8 @@
-![next-i18next and SimpleLocalize example](screenshot.png)
+![next-translate + SimpleLocalize](screenshot.png)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Translations location
+## Translation files
 
 Translations are placed in `/locales/{lang}/{ns}.json`
 
@@ -51,13 +51,13 @@ Create a configuration file in project root.
 
 ```
 
-## NextJS + i18n configuration
+## Next.js 14+ and i18n configuration
 
-Import i18next configuration file into `next.config.js`
+Import next-translate configuration file into `next.config.js`
 
 ```typescript
 // 📦 file: ./next.config.js
-const nextTranslate = require('next-translate')
+const nextTranslate = require('next-translate-plugin')
 
 module.exports = nextTranslate({
   webpack: (config, { isServer, webpack }) => {
@@ -107,15 +107,14 @@ Example usage can be found in `pages/index.tsx`.
 ```typescript
 import useTranslation from 'next-translate/useTranslation'
 
-//translations from common.json
+// translations from common.json
 const { t } = useTranslation('common')
 console.log(t('LEARN_MORE')) // output: Learn more
 
-//translations from home.json
+// translations from home.json
 const {t: homeT} = useTranslation('home');
 console.log(homeT('HELLO_WORLD')) // output: Hello world
 ```
-
 
 
 ## Try out this demo
